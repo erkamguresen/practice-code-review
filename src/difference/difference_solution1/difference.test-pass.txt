@@ -1,7 +1,20 @@
-Tue May 18 2021, 5:51:11 AM
+Tue May 18 2021, 7:40:42 AM
 
 extreme cases
   empty inputs
-    √ PASS: should return empty for an empty array
+    √ PASS: should return empty for an empty array and default values
     √ PASS: should return empty for an empty array and an empty values
+    √ PASS: should return empty for an empty array
+    √ PASS: should return empty for default values
+  repeating elements
+    √ PASS: should not contain repeated elements from the array
+    √ PASS: should not contain repeated elements from the values
+
+normal cases
+  √ PASS: should return [1]
+  √ PASS: should return [2]
+  √ PASS: should include [1] and [4]
+  side effects
+    √ PASS: should not have side effects on the array
+    √ PASS: should not have side effects on the values
 
