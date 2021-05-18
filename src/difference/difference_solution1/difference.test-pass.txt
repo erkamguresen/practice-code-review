@@ -1,0 +1,7 @@
+Tue May 18 2021, 5:51:11 AM
+
+extreme cases
+  empty inputs
+    √ PASS: should return empty for an empty array
+    √ PASS: should return empty for an empty array and an empty values
+
