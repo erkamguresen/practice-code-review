@@ -1,0 +1,8 @@
+Tue May 18 2021, 11:59:01
+
+TypeError: URL.pathToFileURL is not a function
+    at file:///C:/Users/erkam/Documents/GitHub/practice-code-review/dev-scripts/test.js:66:22
+    at file:///C:/Users/erkam/Documents/GitHub/practice-code-review/dev-scripts/test.js:126:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:175:25)
+    at async Loader.import (node:internal/modules/esm/loader:178:24)
+    at async Object.loadESM (node:internal/process/esm_loader:68:5)
