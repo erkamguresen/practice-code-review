@@ -1,4 +1,4 @@
-Tue May 18 2021, 7:40:42 AM
+Wed May 19 2021, 2:41:06 AM
 
 extreme cases
   empty inputs
@@ -13,8 +13,18 @@ extreme cases
 normal cases
   √ PASS: should return [1]
   √ PASS: should return [2]
-  √ PASS: should include [1] and [4]
-  side effects
+  √ PASS: should include [1]
+  √ PASS: should include [4]
+  √ PASS: should not include [4]
+  have no side effects
     √ PASS: should not have side effects on the array
     √ PASS: should not have side effects on the values
+    values of the returned array
+      √ PASS: change in the first array should not have side effects on the return array
+      √ PASS: change in the second array should not have side effects on the return array
+  
+  second array is compared against
+    √ PASS: should not contain [2]
+    √ PASS: should not contain [3]
+    √ PASS: should not contain [4]
 

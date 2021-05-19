@@ -42,15 +42,15 @@ describe('normal cases', () => {
   });
   it('should include [1]', () => {
     const actual = arrayDifference([3, 2, 4, 1], [2, 3]);
-    expect(actual.includes(1)).toEqual(true);
+    expect(actual).toContain(1);
   });
   it('should include [4]', () => {
     const actual = arrayDifference([3, 2, 4, 1], [2, 3]);
-    expect(actual.includes(4)).toEqual(true);
+    expect(actual).toContain(4);
   });
   it('should not include [4]', () => {
     const actual = arrayDifference([3, 2, 4, 1], [2, 3, 4, 4]);
-    expect(!actual.includes(4)).toEqual(true);
+    expect(actual).not.toContain(4);
   });
   describe('have no side effects', () => {
     it('should not have side effects on the array', () => {
@@ -62,6 +62,35 @@ describe('normal cases', () => {
       const actual = [2, 3];
       arrayDifference([1, 2, 3], actual);
       expect(actual).toEqual([2, 3]);
+    });
+    describe('values of the returned array', () => {
+      it('change in the first array should not have side effects on the return array', () => {
+        const actual = [1, 2, 3];
+        const returnedArray = arrayDifference(actual, [2, 3]);
+        returnedArray[0] = 6;
+        expect(actual).not.toContain(6);
+      });
+      it('change in the second array should not have side effects on the return array', () => {
+        const actual = [2, 3];
+        const returnedArray = arrayDifference([1, 2, 3], actual);
+        returnedArray[0] = 6;
+        expect(actual).not.toContain(6);
+      });
+    });
+  });
+
+  describe('second array is compared against', () => {
+    it('should not contain [2]', () => {
+      const actual = arrayDifference([2, 1], [2, 3, 4]);
+      expect(actual).not.toContain(2);
+    });
+    it('should not contain [3]', () => {
+      const actual = arrayDifference([2, 1], [2, 3, 4]);
+      expect(actual).not.toContain(3);
+    });
+    it('should not contain [4]', () => {
+      const actual = arrayDifference([2, 1], [2, 3, 4, 4]);
+      expect(actual).not.toContain(4);
     });
   });
 });
