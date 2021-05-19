@@ -7,8 +7,8 @@
  *
  * **Note:** This function returns a new array, and has no side-effects.
  *
- * @param {Array} [array=[]] - The array to inspect.
- * @param {Array} [values=[]] - The values to exclude.
+ * @param {Array} [arrayToFindTheDifference=[]] - The array to inspect.
+ * @param {Array} [arrayToCompare=[]] - The values to exclude.
  *
  * @returns {Array} Returns the new array of filtered values.
  *
@@ -20,15 +20,15 @@
  *
  * difference([1, 2, 1], [2, 3]); //  [1]
  */
-export const arrayDifference = (array = [], values = []) => {
+export const arrayDifference = (arrayToFindTheDifference = [], arrayToCompare = []) => {
   // ensure that a new array is created
   const returnArray = [];
   // ensure that every element in the array is checked
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+  for (let i = 0; i < arrayToFindTheDifference.length; i++) {
+    const element = arrayToFindTheDifference[i];
     // ensure that the current value is not in the second array
     // and it is not already in the returned array
-    if (!values.includes(element) && !returnArray.includes(element)) {
+    if (!arrayToCompare.includes(element) && !returnArray.includes(element)) {
       returnArray.push(element);
     }
   }
