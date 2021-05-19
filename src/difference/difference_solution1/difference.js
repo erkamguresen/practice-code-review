@@ -20,7 +20,10 @@
  *
  * difference([1, 2, 1], [2, 3]); //  [1]
  */
-export const arrayDifference = (arrayToFindTheDifference = [], arrayToCompare = []) => {
+export const arrayDifference = (
+  arrayToFindTheDifference = [],
+  arrayToCompare = [],
+) => {
   // ensure that a new array is created
   const returnArray = [];
   // ensure that every element in the array is checked
