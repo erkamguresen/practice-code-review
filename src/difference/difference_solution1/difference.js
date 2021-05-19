@@ -21,12 +21,17 @@
  * difference([1, 2, 1], [2, 3]); //  [1]
  */
 export const arrayDifference = (array = [], values = []) => {
+  // ensure that a new array is created
   const returnArray = [];
+  // ensure that every element in the array is checked
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
+    // ensure that the current value is not in the second array
+    // and it is not already in the returned array
     if (!values.includes(element) && !returnArray.includes(element)) {
       returnArray.push(element);
     }
   }
+  // ensure that the new array is returned
   return returnArray;
 };
