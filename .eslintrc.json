@@ -49,6 +49,7 @@
     "no-console": 1,
     "vars-on-top": 0,
     "no-plusplus": 0,
+    "linebreak-style": 0,
 
     "spellcheck/spell-checker": ["warn"],
 
