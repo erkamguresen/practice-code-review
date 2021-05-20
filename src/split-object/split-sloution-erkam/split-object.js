@@ -16,14 +16,14 @@
  * splitObject({});
  * // -> []
  */
-let splitObject = (toSeparate = {}) => {
+export const splitObject = (toSeparate = {}) => {
   const returnArray = [];
 
-for (const key in toSeparate) {
- let obj = {};
- obj[key] = toSeparate[key];
-  returnArray.push(obj);
-}
+  for (const key in toSeparate) {
+    let obj = {};
+    obj[key] = toSeparate[key];
+    returnArray.push(obj);
+  }
 
   return returnArray;
 };
