@@ -1,4 +1,4 @@
-import { splitObject } from './splitObject.js';
+import { splitObject } from './split-object.js';
 
 describe('Splits an object into multiple objects', () => {
   it('expect an empty array if no arguments is passed', () => {

@@ -16,14 +16,16 @@
  * splitObject({});
  * // -> []
  */
-export const solutionName = (toSeparate = {}) => {
+let splitObject = (toSeparate = {}) => {
   const returnArray = [];
 
-  for (const key in toSeparate) {
-    if (Object.hasOwnProperty.call(toSeparate, key)) {
-      returnArray.push({ key: toSeparate[key] });
-    }
-  }
+for (const key in toSeparate) {
+ let obj = {};
+ obj[key] = toSeparate[key];
+  returnArray.push(obj);
+}
 
   return returnArray;
 };
+
+console.log(splitObject({ a: 1, b: 2, c: 3 }));
